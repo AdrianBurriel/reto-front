@@ -1,0 +1,21 @@
+/*Animation run text*/
+@-moz-keyframes run-text {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-250%); }
+}
+@-webkit-keyframes run-text {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-250%); }
+}
+@keyframes run-text {
+ 0%   {
+ -moz-transform: translateX(100%);
+ -webkit-transform: translateX(100%);
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-250%);
+ -webkit-transform: translateX(-250%);
+ transform: translateX(-250%);
+ }
+}

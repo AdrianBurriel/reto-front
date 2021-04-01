@@ -1,0 +1,55 @@
+//Responsive mixins
+@mixin small {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 768.1px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1024.1px) and (max-width: 1365px) {
+    @content;
+  }
+}
+
+body{
+  overflow-x:hidden;
+  font-family: $font-family-primary;
+  background-color: $dark-grey;
+  transition: all .525s ease;
+  margin:0;
+  position: relative;
+  @include small{
+    background:red !important;
+  }
+  &.change-color{
+    background-color: $light-grey;
+  }
+  .main{
+    margin-top:74px;
+  }
+  .fixed-items {
+    position: fixed;
+    top: 70vh;
+    right: 15px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    img{
+      &:first-of-type{
+        margin-bottom:30px;
+      }
+    }
+  }
+}
+a:hover{
+  cursor:pointer;
+}
+*{
+  outline:none;
+}
